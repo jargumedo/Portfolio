@@ -18,7 +18,7 @@ export default function Hero() {
               <span className="text-black font-bold">JA</span>
             </div>
             <div>
-              <h1 className="text-xl">Hi, I'm Juliano</h1>
+              <h1 className="text-xl">Hi, Im Juliano Argumedo</h1>
               <p className="text-gray-400">Front-end developer</p>
             </div>
           </div>
