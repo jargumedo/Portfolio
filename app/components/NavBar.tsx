@@ -24,28 +24,28 @@ export default function Navbar() {
         <span className="font-bold text-xl">Juliano Argumedo</span>
         <span className="text-gray-500 ">Front-end Developer</span>
       </div>
-      <div className="flex gap-8">
+      <div className="flex gap-8 ">
         <button
           onClick={() => scrollToSection("skills")}
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-gray-400 hover:text-white transition-colors hidden md:block"
         >
           Skills
         </button>
         <button
           onClick={() => scrollToSection("languages")}
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-gray-400 hover:text-white transition-colors hidden md:block"
         >
           Languages
         </button>
         <button
           onClick={() => scrollToSection("projects")}
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-gray-400 hover:text-white transition-colors hidden md:block"
         >
           Projects
         </button>
         <button
           onClick={() => scrollToSection("contact")}
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-gray-400 hover:text-white transition-colors hidden md:block"
         >
           Contact
         </button>
