@@ -49,7 +49,7 @@ export default function Contact() {
         <div className="flex justify-center gap-2 ">
           <motion.a
             href={`mailto:${email}`}
-            className="inline-block bg-yellow-400 text-black font-bold py-3 px-8 rounded-full text-lg mb-8 hover:bg-yellow-300 transition-colors duration-300"
+            className="inline-block bg-yellow-400 text-black font-bold py-3 px-8 rounded-full text-sm sm:text-lg mb-8 hover:bg-yellow-300 transition-colors duration-300 "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -59,7 +59,7 @@ export default function Contact() {
           <motion.a
             href="/CV ENG JULIANO ARGUMEDO 2025.pdf" // Ruta al archivo CV
             download="CV ENG Juliano Argumedo.pdf" // Nombre del archivo que se descargará
-            className="inline-block bg-yellow-400 text-black font-bold py-3 px-8 rounded-full text-lg mb-8 hover:bg-yellow-300 transition-colors duration-300"
+            className="inline-block bg-yellow-400 text-black font-bold py-3 px-8 rounded-full text-sm sm:text-lg mb-8 hover:bg-yellow-300 transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
