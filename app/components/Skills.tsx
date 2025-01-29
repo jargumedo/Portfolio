@@ -1,24 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaReact, FaVuejs, FaJs, FaHtml5, FaNodeJs } from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiMongodb,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
 
 interface Skill {
   name: string;
   level: "Beginner" | "Intermediate" | "Advanced";
   percentage: number;
+  icon: IconType;
 }
 
 export default function Skills() {
   const skills: Skill[] = [
-    { name: "React", level: "Advanced", percentage: 90 },
-    { name: "Vue", level: "Advanced", percentage: 95 },
-    { name: "JavaScript", level: "Advanced", percentage: 90 },
-    { name: "Tailwind CSS", level: "Advanced", percentage: 95 },
-    { name: "HTML/CSS", level: "Advanced", percentage: 95 },
-    { name: "TypeScript", level: "Intermediate", percentage: 75 },
-    { name: "Next.js", level: "Intermediate", percentage: 70 },
-    { name: "Node.js", level: "Intermediate", percentage: 65 },
-    { name: "MongoDB", level: "Beginner", percentage: 40 },
+    { name: "React", level: "Advanced", percentage: 90, icon: FaReact },
+    { name: "Vue", level: "Advanced", percentage: 95, icon: FaVuejs },
+    { name: "JavaScript", level: "Advanced", percentage: 90, icon: FaJs },
+    {
+      name: "Tailwind CSS",
+      level: "Advanced",
+      percentage: 95,
+      icon: SiTailwindcss,
+    },
+    { name: "HTML/CSS", level: "Advanced", percentage: 95, icon: FaHtml5 },
+    {
+      name: "TypeScript",
+      level: "Intermediate",
+      percentage: 75,
+      icon: SiTypescript,
+    },
+    {
+      name: "Next.js",
+      level: "Intermediate",
+      percentage: 70,
+      icon: SiNextdotjs,
+    },
+    { name: "Node.js", level: "Intermediate", percentage: 65, icon: FaNodeJs },
+    { name: "MongoDB", level: "Beginner", percentage: 40, icon: SiMongodb },
   ];
 
   return (
@@ -58,15 +82,7 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
           <div className="p-4 bg-black/50 rounded-xl h-full flex flex-col justify-center items-center">
             <h3 className="font-medium text-lg mb-4">{skill.name}</h3>
-            <div className="w-full bg-gray-700 rounded-full h-2.5 mb-2">
-              <motion.div
-                className="bg-yellow-400 h-2.5 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: `${skill.percentage}%` }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              />
-            </div>
-            <p className="text-gray-400">{skill.percentage}%</p>
+            <skill.icon className="text-6xl text-yellow-400" />
           </div>
         </div>
       </motion.div>
