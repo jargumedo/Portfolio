@@ -1,55 +1,68 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { CopyData } from "../copy";
 
-export default function Navbar() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+interface NavBarProps {
+  lang: string;
+  setLang: (l: "en" | "es") => void;
+  theme: string;
+  setTheme: (t: string) => void;
+  t: CopyData;
+}
+
+export default function NavBar({ lang, setLang, theme, setTheme, t }: NavBarProps) {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <motion.nav
-      className="py-8 flex justify-between items-center sticky top-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm"
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="flex items-center gap-2">
-        <span className="font-bold text-xl">Juliano Argumedo</span>
-        <span className="text-gray-500 ">Front-end Developer</span>
+    <nav className={`nav${scrolled ? " scrolled" : ""}`}>
+      <div className="wrap nav-inner">
+        <a href="#top" className="nav-brand">
+          <span className="nav-brand-mark">
+            <span>J</span>
+          </span>
+          <span>Juliano Argumedo</span>
+        </a>
+
+        <div className="nav-links">
+          <a href="#experience">{t.nav.experience}</a>
+          <a href="#work">{t.nav.work}</a>
+          <a href="#about">{t.nav.about}</a>
+          <a href="#contact">{t.nav.contact}</a>
+        </div>
+
+        <div className="nav-utils">
+          <div className="nav-pill lang-toggle" role="group" aria-label="Language">
+            <button
+              className={lang === "en" ? "on" : ""}
+              onClick={() => setLang("en")}
+            >
+              EN
+            </button>
+            <button
+              className={lang === "es" ? "on" : ""}
+              onClick={() => setLang("es")}
+            >
+              ES
+            </button>
+          </div>
+          <button
+            className="nav-pill"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? "☼" : "☾"}
+            <span style={{ marginLeft: 2 }}>{theme === "dark" ? "Light" : "Dark"}</span>
+          </button>
+        </div>
       </div>
-      <div className="flex gap-8 ">
-        <button
-          onClick={() => scrollToSection("skills")}
-          className="text-gray-400 hover:text-white transition-colors hidden md:block"
-        >
-          Skills
-        </button>
-        <button
-          onClick={() => scrollToSection("languages")}
-          className="text-gray-400 hover:text-white transition-colors hidden md:block"
-        >
-          Languages
-        </button>
-        <button
-          onClick={() => scrollToSection("projects")}
-          className="text-gray-400 hover:text-white transition-colors hidden md:block"
-        >
-          Projects
-        </button>
-        <button
-          onClick={() => scrollToSection("contact")}
-          className="text-gray-400 hover:text-white transition-colors hidden md:block"
-        >
-          Contact
-        </button>
-      </div>
-    </motion.nav>
+    </nav>
   );
 }
