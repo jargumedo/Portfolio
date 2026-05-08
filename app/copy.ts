@@ -66,13 +66,13 @@ const COPY: Record<Lang, CopyData> = {
   en: {
     nav: { work: "Work", experience: "Experience", about: "About", contact: "Contact" },
     status: "Available for new projects · Mendoza, AR",
-    role: "Front-End Developer · SSR",
+    role: "Full Stack Developer · SSR",
     heroLine1: "Building",
     heroLine2: "for the",
     heroLine2b: "web.",
     heroLine2Em: "interfaces",
     tagline:
-      "Front-End SSR specialized in Vue and React. I build high-performance, real-time products where architecture and UX are critical.",
+      "Full Stack SSR specialized in Vue and React. I build high-performance, real-time products where architecture and UX are critical.",
     cta: "Get in touch",
     secondaryCta: "Download CV",
     marquee: [
@@ -91,7 +91,7 @@ const COPY: Record<Lang, CopyData> = {
     aboutLabel: "About",
     aboutTitle: "A developer who treats craft as a habit, not a buzzword.",
     bio1:
-      "I'm Juliano — Front-End Developer SSR based in Mendoza, Argentina. I work on complex product environments where performance, architecture and user experience are non-negotiable.",
+      "I'm Juliano — Full Stack Developer SSR based in Mendoza, Argentina. I work on complex product environments where performance, architecture and user experience are non-negotiable.",
     bio2:
       "Beyond shipping interfaces, I design solutions that improve operational efficiency through automation and AI — directly contributing to business growth.",
     stackLabel: "Stack",
@@ -110,7 +110,7 @@ const COPY: Record<Lang, CopyData> = {
     experiences: [
       {
         company: "Fydels",
-        role: "Front-End Developer",
+        role: "Full Stack Developer",
         period: "Feb 2025 — Present",
         location: "Mendoza, AR",
         bullets: [
@@ -123,7 +123,7 @@ const COPY: Record<Lang, CopyData> = {
       },
       {
         company: "EstoyAca",
-        role: "Front-End Developer",
+        role: "Full Stack Developer",
         period: "2024 — 2025",
         location: "Remote",
         bullets: [
@@ -204,13 +204,13 @@ const COPY: Record<Lang, CopyData> = {
   es: {
     nav: { work: "Proyectos", experience: "Experiencia", about: "Sobre mí", contact: "Contacto" },
     status: "Disponible para nuevos proyectos · Mendoza, AR",
-    role: "Desarrollador Front-End · SSR",
+    role: "Desarrollador Full Stack · SSR",
     heroLine1: "Diseñando",
     heroLine2: "para la",
     heroLine2b: "web.",
     heroLine2Em: "interfaces",
     tagline:
-      "Front-End SSR especializado en Vue y React. Construyo productos en tiempo real y de alto rendimiento donde arquitectura y UX son críticas.",
+      "Full Stack SSR especializado en Vue y React. Construyo productos en tiempo real y de alto rendimiento donde arquitectura y UX son críticas.",
     cta: "Hablemos",
     secondaryCta: "Descargar CV",
     marquee: [
@@ -229,7 +229,7 @@ const COPY: Record<Lang, CopyData> = {
     aboutLabel: "Sobre mí",
     aboutTitle: "Un desarrollador que toma el oficio como un hábito, no como un buzzword.",
     bio1:
-      "Soy Juliano — Desarrollador Front-End SSR basado en Mendoza, Argentina. Trabajo en entornos de producto complejos donde la performance, la arquitectura y la experiencia de usuario son innegociables.",
+      "Soy Juliano — Desarrollador Full Stack SSR basado en Mendoza, Argentina. Trabajo en entornos de producto complejos donde la performance, la arquitectura y la experiencia de usuario son innegociables.",
     bio2:
       "Más allá del desarrollo de interfaces, diseño soluciones que mejoran la eficiencia operativa a través de automatización e IA — contribuyendo directamente al crecimiento del negocio.",
     stackLabel: "Stack",
@@ -248,7 +248,7 @@ const COPY: Record<Lang, CopyData> = {
     experiences: [
       {
         company: "Fydels",
-        role: "Front-End Developer",
+        role: "Full Stack Developer",
         period: "Feb 2025 — Actualidad",
         location: "Mendoza, AR",
         bullets: [
@@ -261,7 +261,7 @@ const COPY: Record<Lang, CopyData> = {
       },
       {
         company: "EstoyAca",
-        role: "Front-End Developer",
+        role: "Full Stack Developer",
         period: "2024 — 2025",
         location: "Remoto",
         bullets: [

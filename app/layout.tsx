@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Juliano Argumedo — Full-Stack Developer",
   description:
-    "Juliano Argumedo · Front-End Developer SSR based in Mendoza, AR. React, Vue, Node and more.",
+    "Juliano Argumedo · Full Stack Developer SSR based in Mendoza, AR. React, Vue, Node and more.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

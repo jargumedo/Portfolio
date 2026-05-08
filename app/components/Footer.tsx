@@ -14,9 +14,6 @@ export default function Footer({ t }: { t: CopyData }) {
           <a href="https://linkedin.com/in/julianoargumedo" target="_blank" rel="noreferrer">
             LinkedIn ↗
           </a>
-          <a href="https://twitter.com/juliargumedo" target="_blank" rel="noreferrer">
-            Twitter ↗
-          </a>
         </div>
         <span className="mono">{t.based}</span>
       </div>
